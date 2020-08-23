@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MvcDemoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Student">
+    <Key>
+      <PropertyRef Name="StudentId" />
+    </Key>
+    <Property Name="StudentId" Type="Int32" Nullable="false" />
+    <Property Name="StudentName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Class" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Gender" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="AddressLine" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="MobileNo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="FatherName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="MotherName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="LoginId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="MvcDemoEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Students" EntityType="Self.Student" />
+  </EntityContainer>
+</Schema>
